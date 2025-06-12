@@ -14,7 +14,7 @@
 <body>
   <header id="cabecalho">
     <div class="container">
-      <a href="../../index.html" class="logo">Elas por Elas</a>
+      <a href="inicio.html" class="logo">Elas por Elas</a>
       <button id="hamburger-btn" aria-label="Abrir menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -28,6 +28,7 @@
                 <a href="inicio.html"><img src="../../assets/icon-profile.svg" alt="Ícone de Perfil"></a>
               </li>
               <li><a href="quem-somos.html">Quem Somos</a></li>
+              <li><a href="#" id="logout-btn">Sair</a></li>
               <li class="idioma"><a href="#">pt-br</a> | <a href="../en/home.html">en</a></li>
               <li><a href="ajuda-logado.html"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
             </ul>
@@ -60,68 +61,53 @@
       <div class="coluna-autores">
         <h3>AUTORES</h3>
         <ul>
-          <li>Eduarda Santana</li>
-          <li>Gabriel Pereira</li>
-          <li>Júlio César</li>
-          <li>Lucas Nascimento</li>
-          <li>Nathaly Ferreira</li>
+          <li class="dropdown-autor">
+            <button class="dropdown-trigger">Eduarda Santana</button>
+            <div class="dropdown-content-autor">
+              <a href="https://github.com/eduard4-sant" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/eduarda-santana-6222b3326/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </li>
+          <li class="dropdown-autor">
+            <button class="dropdown-trigger">Gabriel Pereira</button>
+            <div class="dropdown-content-autor">
+              <a href="https://github.com/Gabriel05-gif" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/gabriel-pereira0w/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </li>
+          <li class="dropdown-autor">
+            <button class="dropdown-trigger">Júlio César</button>
+            <div class="dropdown-content-autor">
+              <a href="https://github.com/JulioC3sarDev" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/j%C3%BAlioc%C3%A9sarlk/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </li>
+          <li class="dropdown-autor">
+            <button class="dropdown-trigger">Lucas Nascimento</button>
+            <div class="dropdown-content-autor">
+              <a href="https://github.com/LNS127" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/lucas-nascimento-dev27/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </li>
+          <li class="dropdown-autor">
+            <button class="dropdown-trigger">Nathaly Ferreira</button>
+            <div class="dropdown-content-autor">
+              <a href="https://github.com/FSPNathaly" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/nathaly-ferreira-484704232/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </li>
         </ul>
       </div>
       <div class="coluna-qr-code">
-        <h3>CONHEÇA NOSSO APLICATIVO, ESCANEIE O QR CODE</h3>
-        <img src="assets/qr-code.png" alt="QR Code para baixar o aplicativo.">
-      </div>
-      <div class="coluna-social">
-        <h3>MÍDIA SOCIAL</h3>
-
-        <div class="icones-sociais-desktop">
-          <div class="dropdown">
-            <img src="assets/github-icon.svg" alt="Ícone do GitHub" class="icone-dropdown" id="github-icon">
-            <div id="github-dropdown-content" class="dropdown-conteudo">
-              <a href="https://github.com/FSPNathaly" target="_blank" rel="noopener noreferrer">Nathaly Ferreira</a>
-              <a href="https://github.com/eduard4-sant" target="_blank" rel="noopener noreferrer">Eduarda Santana</a>
-              <a href="https://github.com/LNS127" target="_blank" rel="noopener noreferrer">Lucas Nascimento</a>
-              <a href="https://github.com/JulioC3sarDev" target="_blank" rel="noopener noreferrer">Júlio César</a>
-              <a href="https://github.com/Gabriel05-gif" target="_blank" rel="noopener noreferrer">Gabriel Pereira</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <img src="assets/linkedin-icon.svg" alt="Ícone do LinkedIn" class="icone-dropdown" id="linkedin-icon">
-            <div id="linkedin-dropdown-content" class="dropdown-conteudo">
-              <a href="https://www.linkedin.com/in/nathaly-ferreira-484704232/" target="_blank" rel="noopener noreferrer">Nathaly Ferreira</a>
-              <a href="https://www.linkedin.com/in/eduarda-santana-6222b3326/" target="_blank" rel="noopener noreferrer">Eduarda Santana</a>
-              <a href="https://www.linkedin.com/in/j%C3%BAlioc%C3%A9sarlk/" target="_blank" rel="noopener noreferrer">Júlio César</a>
-              <a href="https://www.linkedin.com/in/gabriel-pereira0w/" target="_blank" rel="noopener noreferrer">Gabriel Pereira</a>
-              <a href="https://www.linkedin.com/in/lucas-nascimento-dev27/" target="_blank" rel="noopener noreferrer">Lucas Nascimento</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="lista-social-mobile">
-          <h4>GitHub</h4>
-          <ul>
-            <li><a href="https://github.com/FSPNathaly" target="_blank" rel="noopener noreferrer">Nathaly Ferreira</a></li>
-            <li><a href="https://github.com/eduard4-sant" target="_blank" rel="noopener noreferrer">Eduarda Santana</a></li>
-            <li><a href="https://github.com/LNS127" target="_blank" rel="noopener noreferrer">Lucas Nascimento</a></li>
-            <li><a href="https://github.com/JulioC3sarDev" target="_blank" rel="noopener noreferrer">Júlio César</a></li>
-            <li><a href="https://github.com/Gabriel05-gif" target="_blank" rel="noopener noreferrer">Gabriel Pereira</a></li>
-          </ul>
-          <h4 class="mt-3">LinkedIn</h4>
-          <ul>
-            <li><a href="https://www.linkedin.com/in/nathaly-ferreira-484704232/" target="_blank" rel="noopener noreferrer">Nathaly Ferreira</a></li>
-            <li><a href="https://www.linkedin.com/in/eduarda-santana-6222b3326/" target="_blank" rel="noopener noreferrer">Eduarda Santana</a></li>
-            <li><a href="https://www.linkedin.com/in/j%C3%BAlioc%C3%A9sarlk/" target="_blank" rel="noopener noreferrer">Júlio César</a></li>
-            <li><a href="https://www.linkedin.com/in/gabriel-pereira0w/" target="_blank" rel="noopener noreferrer">Gabriel Pereira</a></li>
-            <li><a href="https://www.linkedin.com/in/lucas-nascimento-dev27/" target="_blank" rel="noopener noreferrer">Lucas Nascimento</a></li>
-          </ul>
-        </div>
+        <h3>CONHEÇA NOSSO APLICATIVO</h3>
+        <img src="../../assets/qr-code.png" alt="QR Code para baixar o aplicativo.">
       </div>
     </div>
     <div class="copyright">
       <p>Copyright © 2025 Elas por Elas. Todos os direitos reservados.</p>
     </div>
   </footer>
-  
+
   <script src="../../script/script.js"></script>
 </body>
 

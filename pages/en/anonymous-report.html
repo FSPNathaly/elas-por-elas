@@ -22,9 +22,10 @@
       </button>
       <div id="menu-container">
         <div class="navegacao-superior">
-          <a href="login.html" class="botao-acessar">Login</a>
+          <a href="login.html" class="botao-acessar" target="_blank">Login</a>
           <nav id="navegacao-secundaria">
             <ul>
+              <li><a href="anonymous-report.html">Anonymous Report</a></li>
               <li><a href="about-us.html">About Us</a></li>
               <li class="idioma"><a href="../pt/denuncia-anonima.html">pt-br</a> | <a href="#">en</a></li>
               <li><a href="help-logged-out.html"><img src="../../assets/icon-help.svg" alt="Help Icon"></a></li>
@@ -40,7 +41,7 @@
       <form id="form-denuncia">
         <h1>Anonymous Report</h1>
         <div class="input-grupo">
-          <textarea id="descricao-denuncia" name="descricao-denuncia" rows="6" placeholder="Describe here with as much detail as you can..."></textarea>
+          <textarea id="descricao-denuncia" name="descricao-denuncia" rows="6" placeholder="Describe here with as much detail as you can..." required></textarea>
         </div>
         <h2>Attach evidence <span class="opcional">(optional, you can attach photos, audio, and videos)</span></h2>
 
@@ -55,6 +56,15 @@
       </form>
     </div>
   </main>
+
+  <div id="success-modal" class="modal-overlay">
+    <div class="modal-content">
+      <img src="../../assets/icon-success.svg" alt="Success Icon">
+      <h2>Report Sent!</h2>
+      <p>Your report has been successfully registered and sent for analysis. We appreciate your collaboration.</p>
+      <button id="close-modal-btn" class="botao-principal">Got it</button>
+    </div>
+  </div>
 
   <script src="../../script/denuncia.js"></script>
   <script src="../../script/script.js"></script>

@@ -22,9 +22,10 @@
       </button>
       <div id="menu-container">
         <div class="navegacao-superior">
-          <a href="acessar-conta.html" class="botao-acessar">Acessar</a>
+          <a href="acessar-conta.html" class="botao-acessar" target="_blank">Acessar</a>
           <nav id="navegacao-secundaria">
             <ul>
+              <li><a href="denuncia-anonima.html">Denúncia Anônima</a></li>
               <li><a href="quem-somos.html">Quem Somos</a></li>
               <li class="idioma"><a href="#">pt-br</a> | <a href="../en/anonymous-report.html">en</a></li>
               <li><a href="ajuda-deslogado.html"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
@@ -40,7 +41,7 @@
       <form id="form-denuncia">
         <h1>Denúncia Anônima</h1>
         <div class="input-grupo">
-          <textarea id="descricao-denuncia" name="descricao-denuncia" rows="6" placeholder="Descreva aqui com o máximo de detalhes que conseguir..."></textarea>
+          <textarea id="descricao-denuncia" name="descricao-denuncia" rows="6" placeholder="Descreva aqui com o máximo de detalhes que conseguir..." required></textarea>
         </div>
         <h2>Anexe provas <span class="opcional">(opcional, é possível anexar fotos, áudios e vídeos)</span></h2>
         <div id="anexos-container" class="anexos-container">
@@ -48,12 +49,21 @@
             +
           </label>
         </div>
-        
+
         <input type="file" id="anexo-input" multiple accept="image/*,audio/*,video/*">
         <button type="submit" class="botao-principal">Denunciar Anonimamente</button>
       </form>
     </div>
   </main>
+
+  <div id="success-modal" class="modal-overlay">
+    <div class="modal-content">
+      <img src="../../assets/icon-success.svg" alt="Ícone de Sucesso">
+      <h2>Denúncia Enviada!</h2>
+      <p>Sua denúncia foi registrada com sucesso e encaminhada para análise. Agradecemos sua colaboração.</p>
+      <button id="close-modal-btn" class="botao-principal">Entendido</button>
+    </div>
+  </div>
 
   <script src="../../script/denuncia.js"></script>
   <script src="../../script/script.js"></script>

@@ -2,25 +2,54 @@ document.addEventListener("DOMContentLoaded", () => {
   const anexoInput = document.getElementById("anexo-input");
   const anexoContainer = document.getElementById("anexos-container");
   const addAnexoBtn = document.getElementById("add-anexo-btn");
+  const reportForm = document.getElementById("form-denuncia");
+  const successModal = document.getElementById("success-modal");
+  const closeModalBtn = document.getElementById("close-modal-btn");
 
   let allFiles = [];
   const MAX_FILES = 6;
 
-  addAnexoBtn.addEventListener("click", () => anexoInput.click());
+  if (addAnexoBtn) {
+    addAnexoBtn.addEventListener("click", () => anexoInput.click());
+  }
 
-  anexoInput.addEventListener("change", (event) => {
-    const newFiles = Array.from(event.target.files);
-    const availableSlots = MAX_FILES - allFiles.length;
+  if (anexoInput) {
+    anexoInput.addEventListener("change", (event) => {
+      const newFiles = Array.from(event.target.files);
+      const availableSlots = MAX_FILES - allFiles.length;
 
-    if (availableSlots > 0) {
-      allFiles.push(...newFiles.slice(0, availableSlots));
-    }
+      if (availableSlots > 0) {
+        allFiles.push(...newFiles.slice(0, availableSlots));
+      }
 
-    updateAnexoPreviews();
-    anexoInput.value = "";
-  });
+      updateAnexoPreviews();
+      anexoInput.value = "";
+    });
+  }
+
+  if (reportForm && successModal && closeModalBtn) {
+    reportForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      successModal.classList.add("active");
+    });
+
+    closeModalBtn.addEventListener("click", function () {
+      successModal.classList.remove("active");
+
+      const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
+      const isEnglishPage = window.location.pathname.includes("/en/");
+
+      if (isLoggedIn) {
+        window.location.href = isEnglishPage ? "home.html" : "inicio.html";
+      } else {
+        window.location.href = "../../index.html";
+      }
+    });
+  }
 
   function updateAnexoPreviews() {
+    if (!anexoContainer) return;
+
     anexoContainer
       .querySelectorAll(".anexo-preview-wrapper")
       .forEach((wrapper) => wrapper.remove());
@@ -57,7 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
       anexoContainer.insertBefore(wrapper, addAnexoBtn);
     });
 
-    addAnexoBtn.style.display = allFiles.length >= MAX_FILES ? "none" : "flex";
+    if (addAnexoBtn) {
+      addAnexoBtn.style.display =
+        allFiles.length >= MAX_FILES ? "none" : "flex";
+    }
   }
 
   function removeFile(indexToRemove) {

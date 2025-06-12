@@ -108,7 +108,7 @@
 
 .link-interno:hover,
 .link-esqueci-senha:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .social-login {

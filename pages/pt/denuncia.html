@@ -14,7 +14,7 @@
 <body>
   <header id="cabecalho">
     <div class="container">
-      <a href="../../index.html" class="logo">Elas por Elas</a>
+      <a href="inicio.html" class="logo">Elas por Elas</a>
       <button id="hamburger-btn" aria-label="Abrir menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -28,6 +28,7 @@
                 <a href="inicio.html"><img src="../../assets/icon-profile.svg" alt="Ícone de Perfil"></a>
               </li>
               <li><a href="quem-somos.html">Quem Somos</a></li>
+              <li><a href="#" id="logout-btn">Sair</a></li>
               <li class="idioma"><a href="#">pt-br</a> | <a href="../en/report.html">en</a></li>
               <li><a href="ajuda-logado.html"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
             </ul>
@@ -42,7 +43,7 @@
       <form id="form-denuncia">
         <h1>Denúncia</h1>
         <div class="input-grupo">
-          <textarea id="descricao-denuncia" name="descricao-denuncia" rows="6" placeholder="Descreva aqui com o máximo de detalhes que conseguir..."></textarea>
+          <textarea id="descricao-denuncia" name="descricao-denuncia" rows="6" placeholder="Descreva aqui com o máximo de detalhes que conseguir..." required></textarea>
         </div>
         <h2>Anexe provas <span class="opcional">(opcional, é possível anexar fotos, áudios e vídeos)</span></h2>
         <div id="anexos-container" class="anexos-container">
@@ -56,6 +57,15 @@
       </form>
     </div>
   </main>
+
+  <div id="success-modal" class="modal-overlay">
+    <div class="modal-content">
+      <img src="../../assets/icon-success.svg" alt="Ícone de Sucesso">
+      <h2>Denúncia Enviada!</h2>
+      <p>Sua denúncia foi registrada com sucesso e encaminhada para análise. Agradecemos sua colaboração.</p>
+      <button id="close-modal-btn" class="botao-principal">Entendido</button>
+    </div>
+  </div>
 
   <script src="../../script/denuncia.js"></script>
   <script src="../../script/script.js"></script>

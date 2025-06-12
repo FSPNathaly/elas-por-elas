@@ -9,71 +9,100 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const botaoAcessar = document.querySelector(".botao-acessar");
-  if (botaoAcessar) {
-    botaoAcessar.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.location.href = "pages/pt/acessar-conta.html";
+  const handleLogin = () => {
+    sessionStorage.setItem("isLoggedIn", "true");
+  };
+
+  const loginForm = document.getElementById("form-acessar-conta");
+  const createAccountForm = document.getElementById("form-criar-conta");
+
+  if (loginForm) loginForm.addEventListener("submit", handleLogin);
+  if (createAccountForm)
+    createAccountForm.addEventListener("submit", handleLogin);
+
+  const logoutBtn = document.getElementById("logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      sessionStorage.removeItem("isLoggedIn");
+      window.location.href = window.location.pathname.includes("/en/")
+        ? "index.html"
+        : "../../index.html";
     });
   }
 
-  const githubIcon = document.getElementById("github-icon");
-  const linkedinIcon = document.getElementById("linkedin-icon");
-  const githubDropdown = document.getElementById("github-dropdown-content");
-  const linkedinDropdown = document.getElementById("linkedin-dropdown-content");
-
-  if (githubIcon && linkedinIcon && githubDropdown && linkedinDropdown) {
-    function toggleDropdown(dropdown) {
-      dropdown.classList.toggle("mostrar");
-    }
-
-    function fecharDropdowns(event) {
-      if (
-        !githubIcon.contains(event.target) &&
-        !githubDropdown.contains(event.target)
-      ) {
-        githubDropdown.classList.remove("mostrar");
-      }
-      if (
-        !linkedinIcon.contains(event.target) &&
-        !linkedinDropdown.contains(event.target)
-      ) {
-        linkedinDropdown.classList.remove("mostrar");
-      }
-    }
-
-    githubIcon.addEventListener("click", (event) => {
+  document.querySelectorAll(".dropdown-trigger").forEach((button) => {
+    button.addEventListener("click", (event) => {
       event.stopPropagation();
-      linkedinDropdown.classList.remove("mostrar");
-      toggleDropdown(githubDropdown);
+      let content = button.nextElementSibling;
+      document
+        .querySelectorAll(".dropdown-content-autor")
+        .forEach((otherContent) => {
+          if (otherContent !== content) {
+            otherContent.classList.remove("show");
+          }
+        });
+      content.classList.toggle("show");
     });
+  });
 
-    linkedinIcon.addEventListener("click", (event) => {
-      event.stopPropagation();
-      githubDropdown.classList.remove("mostrar");
-      toggleDropdown(linkedinDropdown);
-    });
-
-    window.addEventListener("click", fecharDropdowns);
-  }
+  window.addEventListener("click", (e) => {
+    if (!e.target.matches(".dropdown-trigger")) {
+      document
+        .querySelectorAll(".dropdown-content-autor")
+        .forEach((content) => {
+          content.classList.remove("show");
+        });
+    }
+  });
 
   const togglePasswordButtons = document.querySelectorAll(".toggle-senha");
-
   togglePasswordButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const passwordInput = button.previousElementSibling;
       const icon = button.querySelector("img");
       const isPassword = passwordInput.type === "password";
-
       if (isPassword) {
         passwordInput.type = "text";
         icon.src = "../../assets/icon-eye-open.svg";
-        button.setAttribute("aria-label", "Ocultar senha");
       } else {
         passwordInput.type = "password";
         icon.src = "../../assets/icon-eye-closed.svg";
-        button.setAttribute("aria-label", "Mostrar senha");
       }
     });
   });
+
+  const validateAndToggleButton = (form) => {
+    if (!form) return;
+    const fields = form.querySelectorAll("input[required], textarea[required]");
+    const button = form.querySelector("button[type='submit']");
+    if (!button || fields.length === 0) return;
+    const checkValidation = () => {
+      button.disabled = !Array.from(fields).every(
+        (field) => field.value.trim() !== ""
+      );
+    };
+    fields.forEach((field) => field.addEventListener("input", checkValidation));
+    checkValidation();
+  };
+
+  validateAndToggleButton(loginForm);
+  validateAndToggleButton(createAccountForm);
+  const reportForm = document.getElementById("form-denuncia");
+  if (reportForm) {
+    validateAndToggleButton(reportForm);
+  }
+
+  const currentURL = window.location.href;
+  const navLinks = document.querySelectorAll("#navegacao-secundaria ul li a");
+  navLinks.forEach((link) => {
+    if (link.href === currentURL) {
+      link.classList.add("active-link");
+    }
+  });
+
+  const activeLangLink = document.querySelector('.idioma a[href="#"]');
+  if (activeLangLink) {
+    activeLangLink.classList.add("active-link");
+  }
 });
