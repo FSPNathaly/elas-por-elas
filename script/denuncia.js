@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let allFiles = [];
   const MAX_FILES = 6;
+  let redirectTimeout;
 
   if (addAnexoBtn) {
     addAnexoBtn.addEventListener("click", () => anexoInput.click());
@@ -31,20 +32,31 @@ document.addEventListener("DOMContentLoaded", () => {
     reportForm.addEventListener("submit", function (event) {
       event.preventDefault();
       successModal.classList.add("active");
+
+      redirectTimeout = setTimeout(() => {
+        redirectToPage();
+      }, 5000);
     });
 
     closeModalBtn.addEventListener("click", function () {
-      successModal.classList.remove("active");
-
-      const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
-      const isEnglishPage = window.location.pathname.includes("/en/");
-
-      if (isLoggedIn) {
-        window.location.href = isEnglishPage ? "home.html" : "inicio.html";
-      } else {
-        window.location.href = "../../index.html";
-      }
+      clearTimeout(redirectTimeout);
+      redirectToPage();
     });
+  }
+
+  function redirectToPage() {
+    if (successModal.classList.contains("active")) {
+      successModal.classList.remove("active");
+    }
+
+    const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
+    const isEnglishPage = window.location.pathname.includes("/en/");
+
+    if (isEnglishPage) {
+      window.location.href = isLoggedIn ? "home.html" : "index.html";
+    } else {
+      window.location.href = isLoggedIn ? "inicio.html" : "../../index.html";
+    }
   }
 
   function updateAnexoPreviews() {
