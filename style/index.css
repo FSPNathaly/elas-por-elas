@@ -272,7 +272,7 @@
     font-size: 1.2rem;
   }
   #secao-hero .container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
   }
   #secao-hero .texto-hero p {
@@ -281,6 +281,18 @@
   }
   #secao-funcionalidades .container-grid {
     grid-template-columns: 1fr;
+  }
+  #secao-funcionalidades .grid-item:nth-child(1) {
+    order: 2;
+  }
+  #secao-funcionalidades .grid-item:nth-child(2) {
+    order: 1;
+  }
+  #secao-funcionalidades .grid-item:nth-child(3) {
+    order: 3;
+  }
+  #secao-funcionalidades .grid-item:nth-child(4) {
+    order: 4;
   }
   #secao-funcionalidades .item-imagem-esquerda,
   #secao-funcionalidades .item-imagem-direita {
