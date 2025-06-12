@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elas por Elas - Postos Próximos</title>
+  <link rel="stylesheet" href="../../style/global.css">
+  <link rel="stylesheet" href="../../style/index.css">
+  <link rel="stylesheet" href="../../style/postos-proximos.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+
+  <div id="map"></div>
+
+  <header id="cabecalho">
+    <div class="container">
+      <a href="../../index.html" class="logo">Elas por Elas</a>
+      <div class="navegacao-superior">
+        <nav id="navegacao-secundaria">
+          <ul>
+            <li class="usuario">
+              <a href="inicio.html"><img src="../../assets/icon-profile.svg" alt="Ícone de Perfil"></a>
+            </li>
+            <li><a href="#">Quem Somos</a></li>
+            <li class="idioma"><a href="#">pt-br</a> | <a href="#">en</a></li>
+            <li><a href="#"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <aside class="painel-lateral">
+    <div class="busca-container">
+      <input type="text" id="search" placeholder="Pesquise aqui pontos de apoio...">
+    </div>
+    <div class="lista-postos">
+      <h2>Postos policiais mais próximos</h2>
+      <ul>
+        <a href="detalhe-posto.html">
+          <li>
+            <div class="posto-info">
+              <h3>Delegacia da Mulher</h3>
+              <p>Praça do Campo Santo, S/N</p>
+            </div>
+          </li>
+        </a>
+        <a href="detalhe-posto.html">
+          <li>
+            <div class="posto-info">
+              <h3>Departamento de Polícia da Mulher</h3>
+              <p>Av. Alfredo Lisboa, 188</p>
+            </div>
+          </li>
+        </a>
+        <a href="detalhe-posto.html">
+          <li>
+            <div class="posto-info">
+              <h3>2ª Delegacia de Polícia</h3>
+              <p>Av. Eng. Domingos Ferreira, Boa Viagem</p>
+            </div>
+          </li>
+        </a>
+        <a href="detalhe-posto.html">
+          <li>
+            <div class="posto-info">
+              <h3>Delegacia de Polícia de Olinda</h3>
+              <p>Av. Gov. Agamenon Magalhães, Olinda</p>
+            </div>
+          </li>
+        </a>
+      </ul>
+    </div>
+  </aside>
+
+  <button id="localizacao" aria-label="Minha Localização">
+    <img src="../../assets/location-crosshairs.svg" alt="Ícone de localização">
+  </button>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../../script/postos-proximos.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elas por Elas - Detalhe do Posto</title>
+  <link rel="stylesheet" href="../../style/global.css">
+  <link rel="stylesheet" href="../../style/index.css">
+  <link rel="stylesheet" href="../../style/postos-proximos.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+
+  <div id="map"></div>
+
+  <header id="cabecalho">
+    <div class="container">
+      <a href="../../index.html" class="logo">Elas por Elas</a>
+      <div class="navegacao-superior">
+        <nav id="navegacao-secundaria">
+          <ul>
+            <li class="usuario">
+              <a href="inicio.html"><img src="../../assets/icon-profile.svg" alt="Ícone de Perfil"></a>
+            </li>
+            <li><a href="#">Quem Somos</a></li>
+            <li class="idioma"><a href="#">pt-br</a> | <a href="#">en</a></li>
+            <li><a href="#"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <aside class="painel-lateral painel-detalhe">
+    <div class="detalhe-header">
+      <a href="postos-proximos.html" class="botao-voltar" aria-label="Voltar">
+        <img src="../../assets/arrow-left.svg" alt="Seta para voltar">
+      </a>
+      <h2>Delegacia da Mulher</h2>
+    </div>
+
+    <img class="detalhe-imagem" src="../../assets/delegacia-mulher.png" alt="Foto da Delegacia da Mulher">
+
+    <div class="detalhe-info">
+      <p class="status-aberto">ABERTO 24 HORAS</p>
+      <p class="endereco">Praça do Campo Santo, S/N - Santo Amaro, Recife - PE, 50100-160</p>
+      <a href="http://policiacivil.pe.gov.br" target="_blank" class="site-link">policiacivil.pe.gov.br</a>
+    </div>
+
+    <div class="detalhe-acoes">
+      <button aria-label="Localizar no mapa"><img src="../../assets/icon-pin-map.svg" alt="Localizar"></button>
+      <button aria-label="Salvar local"><img src="../../assets/icon-save.svg" alt="Salvar"></button>
+      <button aria-label="Ligar"><img src="../../assets/icon-phone.svg" alt="Ligar"></button>
+      <button aria-label="Ver rotas"><img src="../../assets/icon-directions.svg" alt="Rotas"></button>
+    </div>
+  </aside>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../../script/postos-proximos.js"></script>
+
+</body>
+
+</html>

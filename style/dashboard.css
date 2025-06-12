@@ -1,0 +1,72 @@
+#cabecalho .navegacao-superior #navegacao-secundaria ul li.usuario {
+  display: flex;
+  align-items: center;
+}
+
+#cabecalho .navegacao-superior #navegacao-secundaria ul li.usuario img {
+  width: 30px;
+  height: 30px;
+}
+
+#conteudo-principal {
+  padding: 60px 0;
+  background-color: #FFFFFF;
+}
+
+#conteudo-principal h1 {
+  color: var(--cor-azul-escuro);
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.card {
+  background-color: #F8F9FA;
+  padding: 30px;
+  border-radius: 8px;
+  flex-basis: 48%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: var(--cor-azul-escuro);
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.card .botao-card {
+  display: inline-block;
+  background-color: var(--cor-primaria);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 25px;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.card .botao-card:hover {
+  background-color: #0041a3;
+}

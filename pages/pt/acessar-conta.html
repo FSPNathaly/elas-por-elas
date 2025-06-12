@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elas por Elas - Acessar sua conta</title>
+  <link rel="stylesheet" href="../../style/global.css">
+  <link rel="stylesheet" href="../../style/index.css">
+  <link rel="stylesheet" href="../../style/form.css">
+</head>
+
+<body>
+  <header id="cabecalho">
+    <div class="container">
+      <a href="../../index.html" class="logo">Elas por Elas</a>
+      <div class="navegacao-superior">
+        <nav id="navegacao-secundaria">
+          <ul>
+            <li><a href="#">Denúncia Anônima</a></li>
+            <li><a href="#">Quem Somos</a></li>
+            <li class="idioma"><a href="#">pt-br</a> | <a href="#">en</a></li>
+            <li><a href="#"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-form">
+    <div class="container">
+      <h1>Acesse sua conta!</h1>
+      <form id="form-acessar-conta">
+        <div class="input-grupo">
+          <label for="email-acessar">E-mail</label>
+          <input type="email" id="email-acessar" name="email-acessar" required>
+        </div>
+        <div class="input-grupo senha-grupo">
+          <label for="senha-acessar">Senha</label>
+          <div class="input-wrapper">
+            <input type="password" id="senha-acessar" name="senha-acessar" required>
+            <button type="button" class="toggle-senha" aria-label="Mostrar senha"><img src="../../assets/icon-eye-closed.svg" alt="Mostrar/Ocultar senha"></button>
+          </div>
+        </div>
+        <a href="#" class="link-esqueci-senha">Esqueceu a senha?</a>
+        <button type="submit" class="botao-principal">Continuar</button>
+        <div class="alternativa-criar-conta">
+          <p>Não tem uma conta?</p>
+          <a href="criar-conta.html" class="botao-secundario">Criar conta</a>
+        </div>
+        <div class="social-login">
+          <button type="button" class="social-icon apple"><img src="../../assets/icon-apple.svg" alt="Apple"></button>
+          <span class="ou-divider">ou</span>
+          <button type="button" class="social-icon google"><img src="../../assets/icon-google.svg" alt="Google"></button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="../../script/script.js"></script>
+</body>
+
+</html>
