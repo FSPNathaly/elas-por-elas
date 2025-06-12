@@ -1,16 +1,6 @@
-#cabecalho .navegacao-superior #navegacao-secundaria ul li.usuario {
-  display: flex;
-  align-items: center;
-}
-
-#cabecalho .navegacao-superior #navegacao-secundaria ul li.usuario img {
-  width: 30px;
-  height: 30px;
-}
-
 #conteudo-principal {
   padding: 60px 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 #conteudo-principal h1 {
@@ -29,7 +19,7 @@
 }
 
 .card {
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   padding: 30px;
   border-radius: 8px;
   flex-basis: 48%;

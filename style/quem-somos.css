@@ -1,0 +1,51 @@
+.container-quem-somos {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.container-quem-somos h1 {
+  font-size: 2.5rem;
+  color: var(--cor-azul-escuro);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 3rem;
+}
+
+.secao-quem-somos {
+  margin-bottom: 2.5rem;
+}
+
+.secao-quem-somos h2 {
+  font-size: 1.8rem;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.secao-quem-somos p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--cor-texto);
+}
+
+.lista-equipe {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.lista-equipe li {
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border-left: 4px solid var(--cor-primaria);
+  color: var(--cor-texto);
+}

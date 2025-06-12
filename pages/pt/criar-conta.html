@@ -14,34 +14,34 @@
   <header id="cabecalho">
     <div class="container">
       <a href="../../index.html" class="logo">Elas por Elas</a>
-      <div class="navegacao-superior">
-        <nav id="navegacao-secundaria">
-          <ul>
-            <li><a href="#">Denúncia Anônima</a></li>
-            <li><a href="#">Quem Somos</a></li>
-            <li class="idioma"><a href="#">pt-br</a> | <a href="#">en</a></li>
-            <li><a href="#"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav id="navegacao-secundaria">
+        <ul>
+          <li><a href="denuncia-anonima.html">Denúncia Anônima</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li class="idioma"><a href="#" class="active">pt-br</a> | <a href="../en/create-account.html">en</a></li>
+          <li><a href="ajuda-deslogado.html"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main id="conteudo-form">
     <div class="container">
       <h1>Crie sua conta!</h1>
-      <form id="form-criar-conta">
+      <form id="form-criar-conta" action="inicio.html">
         <div class="input-grupo">
           <label for="nome">Nome completo <span class="asterisco">*</span></label>
           <input type="text" id="nome" name="nome" required>
         </div>
-        <div class="input-grupo">
-          <label for="cpf">CPF <span class="asterisco">*</span></label>
-          <input type="text" id="cpf" name="cpf" required>
-        </div>
-        <div class="input-grupo">
-          <label for="telefone">Telefone <span class="asterisco">*</span></label>
-          <input type="tel" id="telefone" name="telefone" required>
+        <div class="form-row">
+          <div class="input-grupo">
+            <label for="cpf">CPF <span class="asterisco">*</span></label>
+            <input type="text" id="cpf" name="cpf" required>
+          </div>
+          <div class="input-grupo">
+            <label for="telefone">Telefone <span class="asterisco">*</span></label>
+            <input type="tel" id="telefone" name="telefone" required>
+          </div>
         </div>
         <div class="input-grupo">
           <label for="email-criar">E-mail <span class="asterisco">*</span></label>
@@ -63,18 +63,19 @@
         </div>
         <button type="submit" class="botao-principal">Criar conta</button>
         <div class="alternativa-login">
-          <p>Já tem uma conta?</p>
-          <a href="acessar-conta.html" class="botao-secundario">Acessar conta</a>
-        </div>
-        <div class="social-login">
-          <button type="button" class="social-icon apple"><img src="../../assets/icon-apple.svg" alt="Apple"></button>
-          <span class="ou-divider">ou</span>
-          <button type="button" class="social-icon google"><img src="../../assets/icon-google.svg" alt="Google"></button>
+          <p>Já tem uma conta? <a href="acessar-conta.html" class="link-interno">Acessar conta</a></p>
         </div>
       </form>
     </div>
   </main>
 
+  <footer id="rodape">
+    <div class="container">
+      <div class="copyright">
+        <p>Copyright © 2025 Elas por Elas. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
   <script src="../../script/script.js"></script>
 </body>
 

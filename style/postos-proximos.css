@@ -18,7 +18,7 @@ main {
 #cabecalho {
   position: relative;
   z-index: 2;
-  background-color: #FFFFFFCC;
+  background-color: #ffffffcc;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: 1px solid #eee;

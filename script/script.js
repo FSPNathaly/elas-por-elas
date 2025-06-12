@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const botaoAcessar = document.querySelector(".botao-acessar");
   if (botaoAcessar) {
-    botaoAcessar.addEventListener("click", () => {
-      alert("Funcionalidade de login a ser implementada!");
+    botaoAcessar.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "pages/pt/acessar-conta.html";
     });
   }
 
