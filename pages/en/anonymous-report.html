@@ -8,21 +8,29 @@
   <link rel="stylesheet" href="../../style/global.css">
   <link rel="stylesheet" href="../../style/index.css">
   <link rel="stylesheet" href="../../style/denuncia.css">
+  <link rel="stylesheet" href="../../style/hamburguer.css">
 </head>
 
 <body>
   <header id="cabecalho">
     <div class="container">
-      <a href="../../index.html" class="logo">Elas por Elas</a>
-      <div class="navegacao-superior">
-        <a href="login.html" class="botao-acessar">Login</a>
-        <nav id="navegacao-secundaria">
-          <ul>
-            <li><a href="about-us.html">About Us</a></li>
-            <li class="idioma"><a href="../pt/denuncia-anonima.html">pt-br</a> | <a href="#">en</a></li>
-            <li><a href="help-logged-out.html"><img src="../../assets/icon-help.svg" alt="Help Icon"></a></li>
-          </ul>
-        </nav>
+      <a href="index.html" class="logo">Elas por Elas</a>
+      <button id="hamburger-btn" aria-label="Open menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <div id="menu-container">
+        <div class="navegacao-superior">
+          <a href="login.html" class="botao-acessar">Login</a>
+          <nav id="navegacao-secundaria">
+            <ul>
+              <li><a href="about-us.html">About Us</a></li>
+              <li class="idioma"><a href="../pt/denuncia-anonima.html">pt-br</a> | <a href="#">en</a></li>
+              <li><a href="help-logged-out.html"><img src="../../assets/icon-help.svg" alt="Help Icon"></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -35,20 +43,21 @@
           <textarea id="descricao-denuncia" name="descricao-denuncia" rows="6" placeholder="Describe here with as much detail as you can..."></textarea>
         </div>
         <h2>Attach evidence <span class="opcional">(optional, you can attach photos, audio, and videos)</span></h2>
+
         <div id="anexos-container" class="anexos-container">
-          <div class="anexo-box"></div>
-          <div class="anexo-box"></div>
-          <div class="anexo-box"></div>
-          <div class="anexo-box"></div>
-          <div class="anexo-box"></div>
-          <label for="anexo-input" class="anexo-box anexo-box-add" id="add-anexo-btn">+</label>
+          <label for="anexo-input" class="anexo-box anexo-box-add" id="add-anexo-btn">
+            +
+          </label>
         </div>
+
         <input type="file" id="anexo-input" multiple accept="image/*,audio/*,video/*">
         <button type="submit" class="botao-principal">Report Anonymously</button>
       </form>
     </div>
   </main>
+
   <script src="../../script/denuncia.js"></script>
+  <script src="../../script/script.js"></script>
 </body>
 
 </html>

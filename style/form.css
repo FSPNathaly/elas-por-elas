@@ -157,6 +157,10 @@
   color: #6c757d;
 }
 
+#rodape.rodape-form .container {
+  display: block;
+}
+
 @media (max-width: 576px) {
   .form-row {
     flex-direction: column;

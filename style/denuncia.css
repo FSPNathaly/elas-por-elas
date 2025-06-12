@@ -49,10 +49,6 @@
   position: relative;
   overflow: hidden;
   background-color: #f9f9f9;
-  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.5 6V17.5C16.5 20.2614 14.2614 22.5 11.5 22.5C8.73858 22.5 6.5 20.2614 6.5 17.5V5C6.5 3.067 8.067 1.5 10 1.5C11.933 1.5 13.5 3.067 13.5 5V15.5C13.5 16.6046 12.6046 17.5 11.5 17.5C10.3954 17.5 9.5 16.6046 9.5 15.5V6' stroke='%23d1d1d1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 32px 32px;
 }
 
 .anexo-box-add {
@@ -60,7 +56,6 @@
   font-size: 3rem;
   font-weight: 400;
   color: #b0b0b0;
-  background-image: none;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -73,52 +68,57 @@
   display: none;
 }
 
-.anexo-preview {
+.anexo-preview-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.anexo-preview-wrapper {
+  border-style: solid;
+  border-color: #e0e0e0;
+  border-width: 1px;
+  padding: 5px;
 }
 
 .remover-anexo {
   position: absolute;
   top: 5px;
   right: 5px;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   border-radius: 50%;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 22px;
   text-align: center;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.2s ease;
+  z-index: 10;
 }
 
-.anexo-box:hover .remover-anexo {
+.anexo-preview-wrapper:hover .remover-anexo {
   opacity: 1;
 }
 
 .file-info-preview {
   padding: 5px;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   word-break: break-all;
   color: var(--cor-texto-claro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .file-info-preview svg {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 5px;
-}
-
-#form-denuncia .botao-principal {
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
-  width: auto;
-  padding: 12px 30px;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  color: #888;
 }

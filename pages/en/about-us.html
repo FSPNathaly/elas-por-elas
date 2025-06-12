@@ -8,22 +8,30 @@
   <link rel="stylesheet" href="../../style/global.css">
   <link rel="stylesheet" href="../../style/index.css">
   <link rel="stylesheet" href="../../style/quem-somos.css">
+  <link rel="stylesheet" href="../../style/hamburguer.css">
 </head>
 
 <body>
   <header id="cabecalho">
     <div class="container">
       <a href="index.html" class="logo">Elas por Elas</a>
-      <div class="navegacao-superior">
-        <a href="login.html" class="botao-acessar">Access</a>
-        <nav id="navegacao-secundaria">
-          <ul>
-            <li><a href="anonymous-report.html">Anonymous Report</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li class="idioma"><a href="../pt/quem-somos.html">pt-br</a> | <a href="#">en</a></li>
-            <li><a href="help-logged-out.html"><img src="../../assets/icon-help.svg" alt="Help Icon"></a></li>
-          </ul>
-        </nav>
+      <button id="hamburger-btn" aria-label="Open menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <div id="menu-container">
+        <div class="navegacao-superior">
+          <a href="login.html" class="botao-acessar">Access</a>
+          <nav id="navegacao-secundaria">
+            <ul>
+              <li><a href="anonymous-report.html">Anonymous Report</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li class="idioma"><a href="../pt/quem-somos.html">pt-br</a> | <a href="#">en</a></li>
+              <li><a href="help-logged-out.html"><img src="../../assets/icon-help.svg" alt="Help Icon"></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -32,22 +40,18 @@
     <div class="container-quem-somos">
       <h1>About the Elas por Elas Project</h1>
       <p class="subtitulo">Connecting, protecting, and empowering women through technology.</p>
-
       <div class="secao-quem-somos">
         <h2>Our Mission</h2>
         <p>Our mission is to offer a safe and welcoming digital environment where women can find support, information, and resources to combat violence and ensure their safety. We believe that by joining forces and facilitating access to help, we can create an effective and supportive protection network.</p>
       </div>
-
       <div class="secao-quem-somos">
         <h2>Our Vision</h2>
         <p>We aim to be the main reference platform in Brazil for female safety, an ecosystem where technology acts as an indispensable ally in the prevention of violence and in the support of victims. We want a future where every woman feels safe to report, seek help, and live freely.</p>
       </div>
-
       <div class="secao-quem-somos">
         <h2>How it Works</h2>
         <p>The "Elas por Elas" platform centralizes essential security features. Users can make reports safely and confidentially, find and map the nearest police stations and support centers with detailed information, and access a support community. All just a touch away, in an intuitive and fast way.</p>
       </div>
-
       <div class="secao-quem-somos">
         <h2>Our Team</h2>
         <p>This project was conceived and developed with dedication by a team of students of Systems Analysis and Development from UNIT PE, committed to using technology to generate a positive social impact.</p>
@@ -80,8 +84,47 @@
       </div>
       <div class="coluna-social">
         <h3>SOCIAL MEDIA</h3>
-        <div class="icones-sociais">
-          <a href="https://github.com/FSPNathaly/Elas-por-Elas" target="_blank"><img src="../../assets/github-icon.svg" alt="GitHub Icon" class="icone-dropdown"></a>
+
+        <div class="icones-sociais-desktop">
+          <div class="dropdown">
+            <img src="../../assets/github-icon.svg" alt="GitHub Icon" class="icone-dropdown" id="github-icon">
+            <div id="github-dropdown-content" class="dropdown-conteudo">
+              <a href="https://github.com/FSPNathaly" target="_blank" rel="noopener noreferrer">Nathaly Ferreira</a>
+              <a href="https://github.com/eduard4-sant" target="_blank" rel="noopener noreferrer">Eduarda Santana</a>
+              <a href="https://github.com/LNS127" target="_blank" rel="noopener noreferrer">Lucas Nascimento</a>
+              <a href="https://github.com/JulioC3sarDev" target="_blank" rel="noopener noreferrer">Júlio César</a>
+              <a href="https://github.com/Gabriel05-gif" target="_blank" rel="noopener noreferrer">Gabriel Pereira</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <img src="../../assets/linkedin-icon.svg" alt="LinkedIn Icon" class="icone-dropdown" id="linkedin-icon">
+            <div id="linkedin-dropdown-content" class="dropdown-conteudo">
+              <a href="https://www.linkedin.com/in/nathaly-ferreira-484704232/" target="_blank" rel="noopener noreferrer">Nathaly Ferreira</a>
+              <a href="https://www.linkedin.com/in/eduarda-santana-6222b3326/" target="_blank" rel="noopener noreferrer">Eduarda Santana</a>
+              <a href="https://www.linkedin.com/in/j%C3%BAlioc%C3%A9sarlk/" target="_blank" rel="noopener noreferrer">Júlio César</a>
+              <a href="https://www.linkedin.com/in/gabriel-pereira0w/" target="_blank" rel="noopener noreferrer">Gabriel Pereira</a>
+              <a href="https://www.linkedin.com/in/lucas-nascimento-dev27/" target="_blank" rel="noopener noreferrer">Lucas Nascimento</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lista-social-mobile">
+          <h4>GitHub</h4>
+          <ul>
+            <li><a href="https://github.com/FSPNathaly" target="_blank" rel="noopener noreferrer">Nathaly Ferreira</a></li>
+            <li><a href="https://github.com/eduard4-sant" target="_blank" rel="noopener noreferrer">Eduarda Santana</a></li>
+            <li><a href="https://github.com/LNS127" target="_blank" rel="noopener noreferrer">Lucas Nascimento</a></li>
+            <li><a href="https://github.com/JulioC3sarDev" target="_blank" rel="noopener noreferrer">Júlio César</a></li>
+            <li><a href="https://github.com/Gabriel05-gif" target="_blank" rel="noopener noreferrer">Gabriel Pereira</a></li>
+          </ul>
+          <h4 class="mt-3">LinkedIn</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/nathaly-ferreira-484704232/" target="_blank" rel="noopener noreferrer">Nathaly Ferreira</a></li>
+            <li><a href="https://www.linkedin.com/in/eduarda-santana-6222b3326/" target="_blank" rel="noopener noreferrer">Eduarda Santana</a></li>
+            <li><a href="https://www.linkedin.com/in/j%C3%BAlioc%C3%A9sarlk/" target="_blank" rel="noopener noreferrer">Júlio César</a></li>
+            <li><a href="https://www.linkedin.com/in/gabriel-pereira0w/" target="_blank" rel="noopener noreferrer">Gabriel Pereira</a></li>
+            <li><a href="https://www.linkedin.com/in/lucas-nascimento-dev27/" target="_blank" rel="noopener noreferrer">Lucas Nascimento</a></li>
+          </ul>
         </div>
       </div>
     </div>

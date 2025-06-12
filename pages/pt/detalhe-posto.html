@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../../style/index.css">
   <link rel="stylesheet" href="../../style/postos-proximos.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="../../style/hamburguer.css">
 </head>
 
 <body>
@@ -18,17 +19,24 @@
   <header id="cabecalho">
     <div class="container">
       <a href="../../index.html" class="logo">Elas por Elas</a>
-      <div class="navegacao-superior">
-        <nav id="navegacao-secundaria">
-          <ul>
-            <li class="usuario">
-              <a href="inicio.html"><img src="../../assets/icon-profile.svg" alt="Ícone de Perfil"></a>
-            </li>
-            <li><a href="quem-somos.html">Quem Somos</a></li>
-            <li class="idioma"><a href="#">pt-br</a> | <a href="#">en</a></li>
-            <li><a href="ajuda-logado.html"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
-          </ul>
-        </nav>
+      <button id="hamburger-btn" aria-label="Abrir menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <div id="menu-container">
+        <div class="navegacao-superior">
+          <nav id="navegacao-secundaria">
+            <ul>
+              <li class="usuario">
+                <a href="inicio.html"><img src="../../assets/icon-profile.svg" alt="Ícone de Perfil"></a>
+              </li>
+              <li><a href="quem-somos.html">Quem Somos</a></li>
+              <li class="idioma"><a href="#">pt-br</a> | <a href="../en/station-detail.html">en</a></li>
+              <li><a href="ajuda-logado.html"><img src="../../assets/icon-help.svg" alt="Ícone de Ajuda"></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -40,15 +48,12 @@
       </a>
       <h2>Delegacia da Mulher</h2>
     </div>
-
     <img class="detalhe-imagem" src="../../assets/delegacia-mulher.png" alt="Foto da Delegacia da Mulher">
-
     <div class="detalhe-info">
       <p class="status-aberto">ABERTO 24 HORAS</p>
       <p class="endereco">Praça do Campo Santo, S/N - Santo Amaro, Recife - PE, 50100-160</p>
       <a href="http://policiacivil.pe.gov.br" target="_blank" class="site-link">policiacivil.pe.gov.br</a>
     </div>
-
     <div class="detalhe-acoes">
       <button aria-label="Localizar no mapa"><img src="../../assets/icon-pin-map.svg" alt="Localizar"></button>
       <button aria-label="Salvar local"><img src="../../assets/icon-save.svg" alt="Salvar"></button>
@@ -59,7 +64,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="../../script/postos-proximos.js"></script>
-
+  <script src="../../script/script.js"></script>
 </body>
 
 </html>

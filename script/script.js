@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const menuContainer = document.getElementById("menu-container");
+
+  if (hamburgerBtn && menuContainer) {
+    hamburgerBtn.addEventListener("click", () => {
+      hamburgerBtn.classList.toggle("active");
+      menuContainer.classList.toggle("active");
+    });
+  }
+
   const botaoAcessar = document.querySelector(".botao-acessar");
   if (botaoAcessar) {
     botaoAcessar.addEventListener("click", (event) => {
